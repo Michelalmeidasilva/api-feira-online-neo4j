@@ -1,7 +1,7 @@
 
 # Node neo4j boilerplate by Michel Almeida.
 
-A template for building RESTful APIs using Node.js, graph database neo4j , express.
+A template for building APIs using Node.js, graph database neo4j , express.
 
 # Getting started
 
