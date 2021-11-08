@@ -1,4 +1,4 @@
-export interface Post {
+export interface Movie {
   userId: number;
   id: number;
   title: string;

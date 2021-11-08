@@ -7,7 +7,7 @@
 import http from "http";
 import express, { Express } from "express";
 import morgan from "morgan";
-import routes from "./routes/posts";
+import routes from "./routes/movies";
 import neo4j from "./database/";
 
 const router: Express = express();
