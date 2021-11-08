@@ -10,7 +10,7 @@ const driver = neo4j.driver(
 
 console.log(`Database running at ${process.env.DATABASE}`);
 
-const read = (cypher: string, params = {}, database = config.neo4j.database) => {
+const read = async (cypher: string, params = {}, database = config.neo4j.database) => {
   const session = driver.session({
     defaultAccessMode: neo4j.session.READ,
     database
@@ -28,7 +28,7 @@ const read = (cypher: string, params = {}, database = config.neo4j.database) => 
     });
 };
 
-const write = (cypher: string, params = {}, database = config.neo4j.database) => {
+const write = async (cypher: string, params = {}, database = config.neo4j.database) => {
   const session = driver.session({
     defaultAccessMode: neo4j.session.WRITE,
     database

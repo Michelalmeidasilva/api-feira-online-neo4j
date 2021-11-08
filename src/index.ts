@@ -1,5 +1,9 @@
 /* eslint-disable no-console */
 
+/**
+ * Examples for database usages: https://github.com/neo4j-examples/nodejs-neo4j-realworld-example/blob/master/src/app.js
+ */
+
 import http from "http";
 import express, { Express } from "express";
 import morgan from "morgan";
