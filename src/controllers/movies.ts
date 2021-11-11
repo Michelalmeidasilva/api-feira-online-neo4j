@@ -1,8 +1,10 @@
 /** source/controllers/posts.ts */
 import { Request, Response, NextFunction } from "express";
+import neo4j from "../database/";
 
 // getting all posts
 const getMovies = async (req: Request, res: Response, next: NextFunction) => {
+  // neo4j.read();
   return res.status(200).json({
     message: "getted posts "
   });
