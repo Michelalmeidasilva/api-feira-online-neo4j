@@ -1,5 +1,5 @@
 /** source/controllers/posts.ts */
-import { Request, Response, NextFunction } from "express";
+import { Request, Response } from "express";
 
 import neo4j from "../database/";
 import { Movie } from "../models/Movie";
@@ -32,14 +32,14 @@ const getMovies = async (req: Request, res: Response) => {
 };
 
 // getting a single post
-const getMovie = async (req: Request, res: Response, next: NextFunction) => {
+const getMovie = async (req: Request, res: Response) => {
   return res.status(200).json({
     message: "getted post "
   });
 };
 
 // updating a post
-const updateMovie = async (req: Request, res: Response, next: NextFunction) => {
+const updateMovie = async (req: Request, res: Response) => {
   // return response
   return res.status(200).json({
     message: "updated post "
@@ -47,7 +47,7 @@ const updateMovie = async (req: Request, res: Response, next: NextFunction) => {
 };
 
 // deleting a post
-const deleteMovie = async (req: Request, res: Response, next: NextFunction) => {
+const deleteMovie = async (req: Request, res: Response) => {
   // return response
   return res.status(200).json({
     message: "deleted post"
@@ -55,7 +55,7 @@ const deleteMovie = async (req: Request, res: Response, next: NextFunction) => {
 };
 
 // adding a post
-const addMovie = async (req: Request, res: Response, next: NextFunction) => {
+const addMovie = async (req: Request, res: Response) => {
   // return response
   return res.status(200).json({
     message: "added post "
