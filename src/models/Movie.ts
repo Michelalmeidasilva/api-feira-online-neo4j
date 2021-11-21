@@ -1,6 +1,6 @@
 export interface Movie {
-  userId: number;
-  id: number;
+  tagline: string;
   title: string;
-  body: string;
+  id: number;
+  released: string;
 }
