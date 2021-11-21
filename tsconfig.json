@@ -4,9 +4,6 @@
     "module": "commonjs",                    
     "lib": ["es6"],                     
     "allowJs": true,
-    // "outDir": "build",                          
-    // "rootDir": "src",
-    // "baseUrl": "./",
     "strict": true,         
     "noImplicitAny": true,
     "esModuleInterop": true,
@@ -14,9 +11,6 @@
     "typeRoots": [
       "./types"
     ]
-    // "typeRoots": [
-    //   "./node_module/@types",
-    //   "./src/types"
-    // ],
+  
   }
 }
