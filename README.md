@@ -2,9 +2,10 @@
 # Node neo4j boilerplate by Michel Almeida.
 
 A template for building APIs using Node.js, graph database neo4j , express.
+<img src="https://user-images.githubusercontent.com/37683337/144428200-4881288a-afea-40b0-bc54-e7cde537f80f.png" width="200">
+
 
 # Getting started
-![neo4j](https://user-images.githubusercontent.com/37683337/144428200-4881288a-afea-40b0-bc54-e7cde537f80f.png = 450x450)
 
 ## Installation
 
