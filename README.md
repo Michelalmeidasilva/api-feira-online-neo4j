@@ -4,6 +4,7 @@
 A template for building APIs using Node.js, graph database neo4j , express.
 
 # Getting started
+![neo4j](https://user-images.githubusercontent.com/37683337/144428200-4881288a-afea-40b0-bc54-e7cde537f80f.png = 450x450)
 
 ## Installation
 
