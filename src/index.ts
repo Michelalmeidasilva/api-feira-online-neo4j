@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 });
 
 /** Routes */
-app.use("/", routes);
+app.use("/v1/", routes);
 
 /** Error handling */
 app.use(errorHandlingMiddleware);
