@@ -34,7 +34,7 @@ CREATE (NomeProdutor:Produtor {nome:'',cnpj: })
                                 
 ```
 
-- **Delete a producer**
+**- Delete a producer**
 
 ```cypher
 MATCH (a:Produtor {nome:''}) DETACH DELETE a
