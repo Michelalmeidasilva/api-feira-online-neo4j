@@ -67,7 +67,7 @@ MATCH (Laura:Produtor {nome:'Laura'}),
 
 ## Products
 
-A product labels:
+Attributes:
 
 - Produto [string] -   
 - unidades [number] -  
@@ -77,7 +77,7 @@ A product labels:
 
 #### OPERATIONS:
 
-**-Get a product**
+**- Get a product**
 
 ```cypher
 //Busca um produto pelo nome dele.
@@ -98,31 +98,31 @@ MATCH (a:Produto {produto:''})-[:VENDIDO_POR]->(m:Produtor) RETURN a,m
 
 ```
 
-**-Get all products**
+**- Get all products**
 
 ```cypher
 MATCH (p:Produto) RETURN p
 ```
 
-**-Get a product sold by a producer**  
+**- Get a product sold by a producer**  
 
 ```cypher
 MATCH (a:Produto {produto:''})-[:VENDIDO_POR]->(m:Produtor) RETURN a,m
 ```
 
-**-Add a new product** 
+**- Add a new product** 
 
 ```cypher
 CREATE (Queijo:Produto {produto:'Queijo 1', unidades: , peso:'', valor_peso: })
 ```
 
-**-Delete a product**
+**- Delete a product**
 
 ```cypher
 MATCH (a:Produto {produto:'Queijo'}) DETACH DELETE a
 ```
 
-**-Update properties**
+**- Update properties**
 
 ```cypher
 MATCH (p:Produto {produto:''})
@@ -142,7 +142,7 @@ SET p.litros = //update attribute litro
                    
 ```
 
-**-Relationships:**
+**- Relationships:**
 
 ```cypher
 //Busca por relacionamento entre o produto e seu vendedor
@@ -159,7 +159,7 @@ Attributes:
 
 #### OPERATIONS:
 
-**-Get a stock**
+**- Get a stock**
 
 ```cypher
 //Busca por uma prateleira especifica
@@ -269,8 +269,7 @@ attributes:
 #### OPERATIONS:
 
 
-
-Relationships: 
+**Relationships:** 
 
 
 
