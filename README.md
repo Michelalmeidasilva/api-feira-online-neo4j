@@ -45,6 +45,9 @@ A template for building APIs using Node.js, graph database neo4j , express.
 ├── /test
 ```
 
+
+
+
 ## Test API
 
 To test the api you can use something like postman or [inmsonia](https://insomnia.rest/download) to make the requests and see the returns from api.
@@ -58,3 +61,8 @@ Example:
 If you use the vscode its a good choice download the eslint and prettier extension.
 
 ## Database
+
+
+## Processo de building
+
+Veja o documento  [Deploy](https://github.com/Michelalmeidasilva/api-neo4j-typescript-template/blob/master/deploy-instructions.md)
