@@ -1,3 +1,5 @@
+# Documentation for neo4j database.
+
 ## Producers 
 
 Attributes:
@@ -5,7 +7,7 @@ Attributes:
 - nome [string] -   a producer name 
 - cnpj [string] - 
 
-### Operations: 
+#### OPERATIONS:
 
 **- Get a producer**
 
@@ -72,6 +74,8 @@ A product labels:
 - peso [number] - 
 - valor_peso [number] - 
 - litros [ number ] 
+
+#### OPERATIONS:
 
 **-Get a product**
 
@@ -153,7 +157,7 @@ Attributes:
 
 - tipo [string] -   
 
-### Operations:
+#### OPERATIONS:
 
 **-Get a stock**
 
@@ -213,7 +217,7 @@ Attributes:
 - email [string] -  
 - cpf [string|number] - 
 
-### Operations:
+#### OPERATIONS:
 
 **- Get All clients**
 
@@ -262,7 +266,7 @@ MATCH (Teste:Cliente {nome:"Cliente"}),
 
 attributes:
 
-### Operations:
+#### OPERATIONS:
 
 
 
