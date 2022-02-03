@@ -6,7 +6,7 @@ import config from './config';
 import cors from 'cors';
 import helmet from 'helmet';
 
-import routes from './routes/movies';
+import routes from './routes';
 import { errorHandlingMiddleware } from './middleware/error-handling';
 
 const app: Express = express();
@@ -41,7 +41,6 @@ app.use((req, res, next) => {
 
 /** Routes */
 app.use('/v1/', routes);
-
 /** Error handling */
 app.use(errorHandlingMiddleware);
 
