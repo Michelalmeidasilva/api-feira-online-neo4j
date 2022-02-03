@@ -1,20 +1,20 @@
 import { Model } from './Model';
 
 interface ClientAttributes {
-  greeting: string;
+  name: string;
   email: string;
   cpf: string;
 }
 
 class Client extends Model<Client> {
-  greeting: string;
+  name: string;
   email: string;
   cpf: string;
 
-  constructor({ greeting, email, cpf }: ClientAttributes) {
+  constructor({ name, email, cpf }: ClientAttributes) {
     super({ tableName: 'client' });
 
-    this.greeting = greeting;
+    this.name = name;
     this.email = email;
     this.cpf = cpf;
   }

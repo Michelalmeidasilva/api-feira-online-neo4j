@@ -1,4 +1,4 @@
-import Client from './Client';
+import Client from '../Client';
 
 describe('Test classes', function () {
   test('responds to create a new Client class', () => {
@@ -8,6 +8,6 @@ describe('Test classes', function () {
       email: 'email@example.com'
     });
 
-    expect(client.cpf).toEqual('0405113069');
+    expect(client.cpf).toEqual('04051133069');
   });
 });
