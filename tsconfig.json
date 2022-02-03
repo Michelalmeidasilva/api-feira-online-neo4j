@@ -1,16 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",                          
-    "module": "commonjs",                    
-    "lib": ["es6"],                     
-    "allowJs": true,
-    "strict": true,         
+    "target": "ES2019",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "typeRoots": [
-      "./types"
-    ]
-  
+    "baseUrl": "./"
   }
 }
