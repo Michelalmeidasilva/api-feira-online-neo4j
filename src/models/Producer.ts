@@ -5,7 +5,7 @@ export class Producer extends Model<Producer> {
   cnpj: string;
 
   constructor(nome: string, cnpj: string) {
-    super('Producer');
+    super({ tableName: 'Producer' });
 
     this.cnpj = cnpj;
     this.nome = nome;

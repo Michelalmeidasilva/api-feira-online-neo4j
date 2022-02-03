@@ -4,7 +4,8 @@ export class Stock extends Model<Stock> {
   tipo: string;
 
   constructor(tipo: string) {
-    super('Stock');
+    super({ tableName: 'Stock' });
+
     this.tipo = tipo;
   }
 }
