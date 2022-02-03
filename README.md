@@ -62,7 +62,7 @@ If you use the vscode its a good choice download the eslint and prettier extensi
 
 ## Database
 
-
+see the document [database-doc](https://github.com/Michelalmeidasilva/api-neo4j-typescript-template/blob/master/deploy-instructions.md)
 ## Processo de building
 
-Veja o documento  [Deploy](https://github.com/Michelalmeidasilva/api-neo4j-typescript-template/blob/master/deploy-instructions.md)
+see the document [Deploy](https://github.com/Michelalmeidasilva/api-neo4j-typescript-template/blob/master/deploy-instructions.md)
