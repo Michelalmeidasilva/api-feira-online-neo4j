@@ -1,7 +1,7 @@
 Uma api utilizando Node.js, database neo4j, grapql, typescript, hapi and express 4.
 
 # Iniciando
----
+
 ## Instalação
 
 1. Instale o [Node.JS](https://nodejs.org/en/) LTS version
@@ -13,20 +13,21 @@ Uma api utilizando Node.js, database neo4j, grapql, typescript, hapi and express
 
 ## Antes de rodar o projeto:
 
-
-1. Crie um banco de dados no neo4j desktop.
+#### 1. Crie um banco de dados no neo4j desktop.
 
 ![image](https://user-images.githubusercontent.com/37683337/152645762-4fa8c827-ca16-48ec-8584-97c6aec1fdea.png)
 
 
-2. Crie um novo usuário, para isso entre no modo browser do neo4j desktop e vá para a input de comandos. 
+#### 2. Crie um novo usuário, para isso entre no modo browser do neo4j desktop e vá para a input de comandos. 
 
  - Antes veja quais usuários existem no seu banco de dados, quando recém criado irá aparecer apenas o user neo4j, utilize o comando `SHOW USERS` para visualizar.
 
 ```cypher 
   SHOW USERS
 ```
+
 ![image](https://user-images.githubusercontent.com/37683337/152645892-ddf695af-3556-4568-bd6a-eaca539ef5bc.png)
+
 
 
 - O comando abaixo irá criar um usuário admin, com a senha EXAMPLE@PASSWORD
@@ -53,19 +54,36 @@ Para mais informações, acesse : [neo4j managing users](https://neo4j.com/docs/
 
 
 
-3. Copy the .env and add your values to variables.
+####  3. Copy the .env and add your values to variables.
 
    `$ cp .env.example .env`
 
+Exemplo de .env 
 
-4. Run `yarn start` to start server.
+```javascript
+ PORT=8000
+ URL_DATABASE= neo4j://localhost:7687
+ USERNAME_DATABASE= admin
+ PASSWORD_DATABASE= example123
+ DATABASE_NAME= neo4j
+```
 
-## Para rodar os testes utilize o comando:
-
-1. Run tests: `yarn test`
 
 
-## Para testar a API:
+# Rodando o projeto
+
+1. Execute o comando `yarn start` no terminal para rodar o server.
+ ```shell
+ $michel  `yarn start`
+```
+
+2. Para rodar os testes utilize o comando `yarn test`:
+
+ ```shell
+ $michel  `yarn test`
+```
+
+3. Para testar a API:
 
 Para testar a api você pode usar algo como postman ou [inmsonia](https://insomnia.rest/download) para criar requests e ver o retorno da api.
 
