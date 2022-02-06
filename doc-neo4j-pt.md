@@ -225,13 +225,32 @@ Attributes:
 - nome [string] -   
 - email [string] -  
 - cpf [string|number] - 
-- update_at  - data de update de informaçõe 
+- updated_at  - data de update de informaçõe 
 - created_at - data de criação do cliente
 - Token [string] -
 - senha [string]/criptografada - 
  
 
 #### OPERATIONS:
+
+**- Add a new client**
+```cypher
+CREATE (client:Client {
+ nome:'Tester 01', 
+ email: 'michelalmeida@hotmail.com' ,
+ updated_at:'', 
+ created_at: '1970-01-01T00:00Z', 
+ token: '', 
+ senha: 'QfTjWmZq4t7w!z%C*F-JaNdRgUkXp2r5u8x/A?D(G+KbPeShVmYq3t6v9y$B&E)H'
+})
+```
+
+
+**- Get a specific client **
+
+```cypher
+   MATCH (p:Client {nome: 'Tester 01'}) RETURN p
+```
 
 **- Get All clients**
 
@@ -284,6 +303,50 @@ attributes:
 
 
 **Relationships:** 
+
+
+
+
+
+### Response from database queries:
+
+```cypher 
+[
+  {
+    "keys": [
+      "p"
+    ],
+    "length": 1,
+    "_fields": [
+      {
+        "identity": {
+          "low": 0,
+          "high": 0
+        },
+        "labels": [
+          "Example"
+        ],
+        "properties": {
+          "prop1": "QfTjWmZq4t7w!z%C*F-JaNdRgUkXp2r5u8x/A?D(G+KbPeShVmYq3t6v9y$B&E)H",
+          "prop2": "",
+          "prop3": "1970-01-01T00:00Z",
+          "prop4": "Tester 01",
+          "prop5": "michelalmeida@hotmail.com",
+          "prop6": "",
+          ...
+        }
+      }
+    ],
+    "_fieldLookup": {
+      "p": 0
+    }
+  },
+  ...
+]
+
+```
+
+
 
 
 
