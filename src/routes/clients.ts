@@ -1,17 +1,23 @@
 /** source/routes/posts.ts */
 import express from 'express';
-import { validateSchema } from '../middleware/validate-schema';
 import controller from '../controllers/clients';
 
 import ClientsValidator from '../validators/clients-schema';
 
 const clients = express.Router();
 
-clients.get('/clients', controller.getClient);
-// router.get('/movies/:id', controller.getMovies);
-// router.put('/movies/:id', controller.updateMovie);
-// router.delete('/movies/:id', controller.deleteMovie);
-// clients.post('/clients', validateSchema, controller.addClient);
-clients.post('/clients', ClientsValidator.create(), controller.addClient);
+clients.get('/clients', controller.getAll);
+
+clients.get('/clients/:uuid', controller.get);
+
+clients.put('/clients/:uuid', ClientsValidator.update(), controller.update);
+
+clients.delete(
+  '/clients/:uuid',
+  ClientsValidator.destroy(),
+  controller.destroy
+);
+
+clients.post('/clients', ClientsValidator.create(), controller.create);
 
 export default clients;

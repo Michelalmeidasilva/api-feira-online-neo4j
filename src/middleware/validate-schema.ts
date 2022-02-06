@@ -1,6 +1,7 @@
 import Joi from 'joi';
 
 import { Request, Response, NextFunction } from 'express';
+import { BadRequest } from '../helpers/errors';
 
 /**
  * Helper function to validate an object against the provided schema,
@@ -14,12 +15,13 @@ const validateObject = (
   object = {},
   label: string,
   schema: any,
-  options: any
+  options = {}
 ) => {
   // Skip validation if no schema is provided
   if (schema) {
     // Validate the object against the provided schema
-    const { error, value } = Joi.object(schema).validate(object, options);
+    const { error } = Joi.object(schema).validate(object, options);
+
     if (error) {
       // Throw error with custom message if validation failed
       throw new Error(`Invalid ${label} - ${error.message}`);
@@ -28,7 +30,7 @@ const validateObject = (
 };
 
 /**
- * Generate a Koa middleware function to validate a request using
+ * Generate a express middleware function to validate a request using
  * the provided validation objects.
  *
  * @param {Object} validationObj
@@ -36,7 +38,7 @@ const validateObject = (
  * @param {Object} validationObj.params The request params schema
  * @param {Object} validationObj.query The request query schema
  * @param {Object} validationObj.body The request body schema
- * @returns A Koa middleware function.
+ * @returns A express middleware function.
  */
 export const validateSchema =
   (validationObj: any) => (req: Request, res: Response, next: NextFunction) => {
@@ -44,16 +46,18 @@ export const validateSchema =
       validateObject(req.headers, 'Headers', validationObj.headers, {
         allowUnknown: true
       });
-      // validateObject(req.params, 'URL Parameters', validationObj.params);
-      // validateObject(ctx.query, 'URL Query', validationObj.query);
+
+      validateObject(req.params, 'URL Parameters', validationObj.params);
+
+      validateObject(req.query, 'URL Query', validationObj.query);
 
       if (req.body) {
-        validateObject(req.body, 'Request Body', validationObj.body, {});
+        validateObject(req.body, 'Request Body', validationObj.body);
       }
 
       return next();
-    } catch (err) {
+    } catch (err: any) {
       // If any of the objects fails validation, send an HTTP 400 response.
-      throw new Error('error');
+      throw BadRequest(err?.message);
     }
   };
