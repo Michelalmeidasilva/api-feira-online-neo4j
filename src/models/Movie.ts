@@ -7,7 +7,7 @@ export class Movie extends Model<Movie> {
   released: string;
 
   constructor(tagline: string, title: string, id: number, released: string) {
-    super('Movie');
+    super({ tableName: 'Movie' });
 
     this.id = id;
     this.released = released;

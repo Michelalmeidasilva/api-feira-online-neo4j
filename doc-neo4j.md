@@ -1,11 +1,20 @@
 # Documentation for neo4j database.
 
+
+
 ## Producers 
 
 Attributes:
 
 - nome [string] -   a producer name 
 - cnpj [string] - 
+- update_at  - data de update de informaçõe 
+- created_at - data de criação do produtor
+- Token [string] -
+- senha [string]/criptografada - 
+ 
+
+
 
 #### OPERATIONS:
 
@@ -216,6 +225,11 @@ Attributes:
 - nome [string] -   
 - email [string] -  
 - cpf [string|number] - 
+- update_at  - data de update de informaçõe 
+- created_at - data de criação do cliente
+- Token [string] -
+- senha [string]/criptografada - 
+ 
 
 #### OPERATIONS:
 

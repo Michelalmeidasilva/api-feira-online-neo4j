@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from 'express';
 
-import { GeneralError, NotContent, InternalServerError, sendError } from "../helpers/errors";
+import { GeneralError, sendError, isGeneralError } from '../helpers/errors';
 
 export const errorHandlingMiddleware = async (
   error: GeneralError,
@@ -8,18 +8,18 @@ export const errorHandlingMiddleware = async (
   res: Response,
   next: NextFunction
 ) => {
-  if (error instanceof NotContent) {
-    return sendError(error, res);
+  if (!error) {
+    next();
   }
 
-  if (error instanceof InternalServerError) {
+  if (isGeneralError(error)) {
     return sendError(error, res);
   }
 
   return sendError(
     {
-      message: "Unknown Error",
-      name: "UnknownError",
+      message: 'Unknown Error',
+      name: 'UnknownError',
       statusCode: 500
     },
     res

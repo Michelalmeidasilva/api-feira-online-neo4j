@@ -14,7 +14,7 @@ export class Product extends Model<Product> {
     valor_peso: number,
     litros: number
   ) {
-    super('Product');
+    super({ tableName: 'Product' });
 
     this.produto = produto;
     this.unidades = unidades;
