@@ -103,7 +103,3 @@ A documentação do banco de dados está em: [Documentação neo4j - FeiraOnline
 ## Processo de deploy 
 
 Veja o documento  [Deploy](https://github.com/Michelalmeidasilva/api-neo4j-typescript-template/blob/master/deploy-instructions.md)
-
-
-
-# Node neo4j boilerplate feito por Michel Almeida.
