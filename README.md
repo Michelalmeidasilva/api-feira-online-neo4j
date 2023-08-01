@@ -1,27 +1,26 @@
+### API using Node.js, neo4j database, GraphQL, TypeScript, Hapi, and Express 4.
 
-### API utilizando Node.js, database neo4j, grapql, typescript, hapi and express 4.
+# Getting Started
 
-# Iniciando
+## Installation
 
-## Instalação
-
-1. Instale o [Node.JS](https://nodejs.org/en/) LTS version
-2. Instale o [neo4j](https://neo4j.com/download/)
-3. Clone esse repositório e entre na pasta onde o mesmo foi clonado.
-4. Instale as dependencias rodando: `yarn` or `npm install`
+1. Install [Node.JS](https://nodejs.org/en/) LTS version
+2. Install [neo4j](https://neo4j.com/download/)
+3. Clone this repository and navigate to the cloned directory.
+4. Install dependencies by running: `yarn` or `npm install`
 
 --- 
 
-## Antes de rodar o projeto:
+## Before running the project:
 
-#### 1. Crie um banco de dados no neo4j desktop.
+#### 1. Create a database in neo4j desktop.
 
 ![image](https://user-images.githubusercontent.com/37683337/152645762-4fa8c827-ca16-48ec-8584-97c6aec1fdea.png)
 
 
-#### 2. Crie um novo usuário, para isso entre no modo browser do neo4j desktop e vá para a input de comandos. 
+#### 2. Create a new user, to do this, enter the neo4j desktop browser mode and go to the command input. 
 
- - Antes veja quais usuários existem no seu banco de dados, quando recém criado irá aparecer apenas o user neo4j, utilize o comando `SHOW USERS` para visualizar.
+ - First, check which users exist in your database. When freshly created, only the 'neo4j' user will appear. Use the command `SHOW USERS` to view.
 
 ```cypher 
   SHOW USERS
@@ -31,7 +30,7 @@
 
 
 
-- O comando abaixo irá criar um usuário admin, com a senha EXAMPLE@PASSWORD
+- The following command will create an 'admin' user with the password 'EXAMPLE@PASSWORD'.
 
 ```cypher
       CREATE USER example_admin IF NOT EXISTS
@@ -41,17 +40,16 @@
        SET HOME DATABASE neo4j 
 ```
 
-para mais opções de criação do usuário vá em [create-users](https://neo4j.com/docs/cypher-manual/current/access-control/manage-users/#:~:text=in%20Listing%20privileges.-,4.%20Creating%20users,-Users%20can%20be)
+For more user creation options, refer to [create-users](https://neo4j.com/docs/cypher-manual/current/access-control/manage-users/#:~:text=in%20Listing%20privileges.-,4.%20Creating%20users,-Users%20can%20be)
 
 
-- O comando abaixo vai permitir que o usuário admin tenha as permissões de um administrador
+- The following command will grant the 'admin' role to the 'example_admin' user.
 
 ```cypher
    GRANT ROLE admin, PUBLIC TO example_admin
 ```
 
-
-Para mais informações, acesse : [neo4j managing users](https://neo4j.com/docs/cypher-manual/current/access-control/manage-users/)
+For more information, visit: [neo4j managing users](https://neo4j.com/docs/cypher-manual/current/access-control/manage-users/)
 
 
 
@@ -59,7 +57,7 @@ Para mais informações, acesse : [neo4j managing users](https://neo4j.com/docs/
 
    `$ cp .env.example .env`
 
-Exemplo de .env 
+Example .env file:
 
 ```javascript
  PORT=8000
@@ -71,36 +69,36 @@ Exemplo de .env
 
 
 
-# Rodando o projeto
+# Running the Project
 
-1. Execute o comando `yarn start` no terminal para rodar o server.
+1. Run the command `yarn start` in the terminal to start the server.
  ```shell
  $michel  `yarn start`
 ```
 
-2. Para rodar os testes utilize o comando `yarn test`:
+2. To run the tests, use the command `yarn test`:
 
  ```shell
  $michel  `yarn test`
 ```
 
-3. Para testar a API:
+3. To test the API:
 
-Para testar a api você pode usar algo como postman ou [inmsonia](https://insomnia.rest/download) para criar requests e ver o retorno da api.
+To test the API, you can use tools like Postman or [Insomnia](https://insomnia.rest/download) to create requests and view the API's responses.
 
-Exemplo:  
+Example:  
 
 <img src="https://i.ibb.co/Bfj8crN/Captura-de-Tela-2021-12-12-a-s-15-20-28.png" width="600">
 
 
 ## Styleguide
 
-If you use the vscode its a good choice download the eslint and prettier extension.
+If you use VSCode, it's a good choice to download the ESLint and Prettier extensions.
 
 ## Database
 
-A documentação do banco de dados está em: [Documentação neo4j - FeiraOnline](https://github.com/Michelalmeidasilva/api-neo4j-typescript-template/blob/feat/neo4j/doc-neo4j-pt.md)
+The database documentation is available at: [Neo4j Documentation - FeiraOnline](https://github.com/Michelalmeidasilva/api-neo4j-typescript-template/blob/feat/neo4j/doc-neo4j-pt.md)
 
-## Processo de deploy 
+## Deployment Process 
 
-Veja o documento  [Deploy](https://github.com/Michelalmeidasilva/api-neo4j-typescript-template/blob/master/deploy-instructions.md)
+Refer to the document [Deploy](https://github.com/Michelalmeidasilva/api-neo4j-typescript-template/blob/master/deploy-instructions.md) for deployment instructions.
